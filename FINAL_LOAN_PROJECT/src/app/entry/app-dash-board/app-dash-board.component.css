@@ -1,0 +1,15 @@
+.row{
+   display: flex;
+}
+.col-1{
+    background-color: darkorange;
+    width: 300px;
+    height: 600px;
+   
+}
+.col-2{
+    background-color: deeppink;
+    width: 70%;
+    height: 550px;
+}
+

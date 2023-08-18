@@ -1,0 +1,26 @@
+/* .appNavBar{
+ background-color: rgb(42, 165, 140);
+ height: 60px;
+ padding-top: 20px; 
+}
+button{
+    float: right;
+    
+}
+h1{
+   padding-bottom: 200px;
+} */
+
+.appNavBar{
+
+display: flex;
+justify-content: space-between ;
+background-color: #c8e8e9;
+
+}
+button{
+    margin-top: 10px;
+   height: 35px;
+   color: steelblue;
+    background-color: brown;
+}

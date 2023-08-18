@@ -1,0 +1,23 @@
+<div class="loginBox"> <img class="user" src="https://i.ibb.co/yVGxFPR/2.png" height="100px" width="100px">
+  <h3>Sign in here</h3>
+  <form [formGroup]="loginForm"(ngSubmit)="onLogin()">
+      <div class="inputBox">
+        <input type="text" formControlName="username" placeholder="Enter Username">
+        <input type="text" formControlName="password" placeholder="Enter Password"> 
+        </div> <input type="submit" value="Login">
+  </form> 
+ 
+  <div class="text-center">
+     
+  </div>
+  
+</div>
+
+<!----<form [formGroup]="loginForm"(ngSubmit)="onLogin()">
+  <div>
+  <input type="text" formControlName="username" placeholder="Enter Username">
+  <input type="text" formControlName="password" placeholder="Enter Password">
+
+  <button type="submit">LOGIN</button>
+  </div>
+</form>--->
