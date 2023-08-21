@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 header{
    text-indent: 20px;
    height: 20px;
@@ -30,6 +31,8 @@ body {
   margin-top: 45px;
   border-radius: 20px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  justify-content: center;
 }
 .container header {
   font-size: 1.8rem;
@@ -39,6 +42,8 @@ body {
 }
 .container .form {
   margin-top: 40px;
+  align-items: center;
+  justify-content: center;
 }
 .form .input-box {
   width: 100%;
