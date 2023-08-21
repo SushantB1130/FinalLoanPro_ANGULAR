@@ -6,7 +6,7 @@ export class UserRoles {
       re:[
            {label:'View Enquiry',path:'viewEnq'},
            {label:'Add Enquiry',path:'addEnq'},
-           {label:'Send Mail',path:'loanApp'},
+           {label:'Send Mail',path:'sendMail'},
         ],
         oe:[
           {label:'view Enquiry',path:'checkCibil'},
