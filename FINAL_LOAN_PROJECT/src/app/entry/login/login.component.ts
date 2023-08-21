@@ -49,7 +49,7 @@ export class LoginComponent implements OnInit {
       }
       else if(data.responsedata.userType=='admin')
       {
-          localStorage.setItem("userType","oe");
+          localStorage.setItem("userType","admin");
           this.router.navigateByUrl('/dash/admin')
       }
 

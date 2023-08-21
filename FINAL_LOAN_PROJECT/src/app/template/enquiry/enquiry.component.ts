@@ -40,7 +40,7 @@ addenquiry()
 
 resetform()
 {
-  this.enquiryForm.reset;
+  this.enquiryForm.reset();
 }
 
 
