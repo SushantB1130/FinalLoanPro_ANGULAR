@@ -14,6 +14,7 @@ import { LoginComponent } from './entry/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EnquiryComponent } from './template/enquiry/enquiry.component';
 import { HomeLandingPageComponent } from './template/home-landing-page/home-landing-page.component';
+import { HttpClient, HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { HomeLandingPageComponent } from './template/home-landing-page/home-land
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
