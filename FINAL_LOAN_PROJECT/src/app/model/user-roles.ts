@@ -11,7 +11,8 @@ export class UserRoles {
         oe:[
           {label:'view Enquiry',path:'checkCibil'},
           {label:'Verify Application',path:'verifyApp'},
-        ]
+        ],
+        
   }
 
  ]
