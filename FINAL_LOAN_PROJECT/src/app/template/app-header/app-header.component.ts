@@ -22,6 +22,11 @@ export class AppHeaderComponent implements OnInit{
      
       this.userType='Operational Executive'
     }
+    else if(ut=='admin')
+    {
+     
+      this.userType='Administrator'
+    }
   }
 
 }
