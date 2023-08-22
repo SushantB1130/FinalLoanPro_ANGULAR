@@ -2,13 +2,13 @@
    display: flex;
 }
 .col-1{
-    background-color: darkorange;
+    background-color: rgb(241, 244, 239);
     width: 300px;
-    height: 600px;
+    height: 800px;
    
 }
 .col-2{
-    background-color: deeppink;
+    background-color: rgb(255, 252, 254);
     width: 70%;
     height: 550px;
 }

@@ -13,6 +13,7 @@ export class LoanserviceService {
     return this.http.post("http://localhost:9091/addenquiry",enq);
   }
 
+
   getuser(userName:any,passWord:any)
   {
     return this.http.get("http://localhost:9091/getuserdata/"+userName+"/"+passWord)
