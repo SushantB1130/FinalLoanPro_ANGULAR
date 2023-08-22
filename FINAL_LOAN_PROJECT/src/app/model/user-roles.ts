@@ -12,7 +12,11 @@ export class UserRoles {
           {label:'view Enquiry',path:'checkCibil'},
           {label:'Verify Application',path:'verifyApp'},
         ],
+
+        admin:[
+          {label:'ADD USER',path:'addusers'}
         
+        ]
   }
 
  ]

@@ -8,6 +8,7 @@ import { Component,OnInit } from '@angular/core';
 export class AppHeaderComponent implements OnInit{
 
   userType:string;
+  userimg:any;
 
   ngOnInit(): void 
   {
@@ -18,6 +19,7 @@ export class AppHeaderComponent implements OnInit{
     }
     else if(ut=='oe')
     {
+     
       this.userType='Operational Executive'
     }
   }

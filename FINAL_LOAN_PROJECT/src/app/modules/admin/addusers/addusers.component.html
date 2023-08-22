@@ -1,0 +1,43 @@
+<body>
+    <section class="container">
+      <header>ADD USER FORM</header>
+      <form class="form" [formGroup]="adduserForm" (ngSubmit)="saveuser()">
+        <div class="input-box">
+          <label>NAME</label>
+          <input type="text" placeholder="Enter First name" required formControlName="firstName" />
+        </div>
+        <div class="input-box">
+          <label>EMAIL ID</label>
+          <input type="text" placeholder="Domain@gmail.com" required formControlName="email"/>
+        </div>
+
+        <br>
+
+        <div>
+
+            <label >Select Position:-</label>
+        <br>
+        <br>
+        <select id="cars" class="btn">
+          <option value="re">Relational Executive</option>
+          <option value="oe">Operational Executive</option>
+          <option value="cm">Credit Manager</option>
+          <option value="account">Account dept</option>
+        </select>
+        </div>
+      <br>
+      <br>
+    
+            <label>PROFILE PHOTO:-</label>
+            <br><br>
+            
+            <input type="file" (change)="onselectprofileimage($event)">
+            <img [src]="proimg" >
+    
+     
+        
+       
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </body>

@@ -21,6 +21,6 @@ background-color: #c8e8e9;
 button{
     margin-top: 10px;
    height: 35px;
-   color: steelblue;
-    background-color: brown;
+   color: rgb(250, 250, 250);
+    background-color: rgb(165, 159, 42);
 }
