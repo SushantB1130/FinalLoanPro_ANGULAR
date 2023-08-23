@@ -1,0 +1,23 @@
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>EMAIL</th>
+            <th>PROFILE PHOTO</th>
+            <th>USER TYPE</th>
+            <th>ACTION</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of users">
+            <td>{{e.userId}}</td>
+            <td>{{e.name}}</td>
+            <td>{{e.email}}</td>
+            <td><img [src]="'data:image/png;base64,'+e.profilephoto" width="150px" height="150px"/></td>
+            <td>{{e.userType}}</td>
+            <td><button class="btn btn-danger"(click)="deleteuser(e.userId)">Delete User</button></td>
+        </tr>
+                         
+    </tbody>
+</table>

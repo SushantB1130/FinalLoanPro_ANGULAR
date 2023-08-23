@@ -4,7 +4,7 @@
       <form class="form" [formGroup]="adduserForm" (ngSubmit)="saveuser()">
         <div class="input-box">
           <label>NAME</label>
-          <input type="text" placeholder="Enter First name" required formControlName="firstName" />
+          <input type="text" placeholder="Enter First name" required formControlName="name" />
         </div>
         <div class="input-box">
           <label>EMAIL ID</label>
@@ -18,7 +18,7 @@
             <label >Select Position:-</label>
         <br>
         <br>
-        <select id="cars" class="btn">
+        <select id="cars" class="btn" formControlName="userType">
           <option value="re">Relational Executive</option>
           <option value="oe">Operational Executive</option>
           <option value="cm">Credit Manager</option>
@@ -32,7 +32,7 @@
             
             
             <input type="file" (change)="onselectprofileimage($event)">
-            <img [src]="proimg" >
+            <img [src]="proimg" [hidden]="! proimg" >
     
         <button type="submit">Submit</button>
       </form>

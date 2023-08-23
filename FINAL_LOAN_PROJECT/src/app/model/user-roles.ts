@@ -15,7 +15,10 @@ export class UserRoles {
         ],
 
         admin:[
-          {label:'ADD USER',path:'addusers'}
+         
+          {label:'ADD USER',path:'addusers'},
+          {label:'VIEW USER',path:'viewusers'},
+          {label:'SEND MAIL',path:'addusers'},
         
         ]
   }

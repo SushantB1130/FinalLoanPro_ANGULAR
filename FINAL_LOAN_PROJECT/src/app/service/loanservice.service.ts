@@ -19,8 +19,38 @@ export class LoanserviceService {
     return this.http.get("http://localhost:9091/getuserdata/"+userName+"/"+passWord)
   }
 
+
   sendMail(data:FormData)
   {
     return this.http.post("http://localhost:9091/sendMailWithAttachment",data);
   }
+
+  
+
+  adduser(f:FormData){
+
+    return this.http.post("http://localhost:9091/adduser/",f)
+  }
+
+  getenquiry(enquirystatus1:string,enquirystatus2:string)
+  {
+    return this.http.get("http://localhost:9091/getenq/"+enquirystatus1+"/"+enquirystatus2);
+  }
+
+  getallusers()
+  {
+    return this.http.get("http://localhost:9091/getallusers");
+  }
+
+  deleteuser(userId)
+  {
+    return this.http.delete("http://localhost:9091/deletuser/"+userId);
+  }
+
+  verifyenq(eid:number)
+  {
+    return this.http.put("http://localhost:9091/updatestatus/"+eid,{});
+  }
+
+
 }
