@@ -1,4 +1,16 @@
+
+<img [src]="'data:image/png;base64,'+proimg">
+<div>
+   <h5>{{userType|uppercase}}</h5>
+    <h6>{{userdata.email}}</h6>
+
+</div>
+<br>
 <div *ngFor="let menu of menus[0][userType]">
+ 
     <!-- <button (click)="navigateTo(menu.path)">{{menu.label}}</button> -->
     <button type="button" class="btn btn-warning" (click)="navigateTo(menu.path)">{{menu.label}}</button>
+  
 </div>
+
+<button type="button" class="btn btn-danger" routerLink="" style="margin-left: 50px; margin-top: 170px;"><i class="fa fa-sign-out" aria-hidden="true">SIGN OUT</i></button>

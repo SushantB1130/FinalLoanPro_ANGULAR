@@ -52,5 +52,9 @@ export class LoanserviceService {
     return this.http.put("http://localhost:9091/updatestatus/"+eid,{});
   }
 
+  getsingleuser(userType:string)
+  {
+    return this.http.get("http://localhost:9091/getsingleuser/"+userType);
+  }
 
 }

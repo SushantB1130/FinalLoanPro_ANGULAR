@@ -18,7 +18,9 @@ export class UserRoles {
          
           {label:'ADD USER',path:'addusers'},
           {label:'VIEW USER',path:'viewusers'},
-          {label:'SEND MAIL',path:'addusers'},
+          {label:'SEND MAIL',path:'sendmail'},
+          {label:'SALES & TARGET',path:'sales'},
+         
         
         ]
   }

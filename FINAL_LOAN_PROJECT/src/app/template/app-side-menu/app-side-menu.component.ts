@@ -1,6 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserRoles } from 'src/app/model/user-roles';
+import { LoanserviceService } from 'src/app/service/loanservice.service';
 
 @Component({
   selector: 'app-app-side-menu',
@@ -11,14 +12,25 @@ export class AppSideMenuComponent implements OnInit{
 
   menus:any[];
   userType:string;
+  proimg:any;
+  profile:any;
+  userdata:any;
 
-  constructor(private router:Router){}
+  reader=new FileReader();
+
+  constructor(private router:Router,private ls:LoanserviceService){}
 
   ngOnInit(): void 
   {
     this.userType=localStorage.getItem('userType');
         this.menus=UserRoles.userRoles;
-        console.log(this.menus[0]['re'])
+        this.ls.getsingleuser(this.userType).subscribe((data:any)=>{
+          this.userdata=data.responsedata;
+          this.proimg=data.responsedata.profilephoto;
+          this.reader.onload=e=>this.profile=this.reader.result;
+          this.reader.readAsDataURL(this.proimg);
+        })
+
   }
   
   navigateTo(path:String)

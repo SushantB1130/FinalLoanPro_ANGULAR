@@ -14,7 +14,7 @@ h1{
 .appNavBar{
 
 display: flex;
-justify-content: space-between ;
+justify-content: center ;
 background-color: #c8e8e9;
 
 }
