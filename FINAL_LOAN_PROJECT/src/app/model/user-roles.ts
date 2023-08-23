@@ -9,8 +9,9 @@ export class UserRoles {
            {label:'Send Mail',path:'sendMail'},
         ],
         oe:[
-          {label:'view Enquiry',path:'checkCibil'},
+          {label:'View Enquiry',path:'viewenquiry'},
           {label:'Verify Application',path:'verifyApp'},
+          {label:'Send Mail', path:'sendMailOe'}
         ],
 
         admin:[

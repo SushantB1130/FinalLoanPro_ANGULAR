@@ -16,6 +16,7 @@ import { EnquiryComponent } from './template/enquiry/enquiry.component';
 import { HomeLandingPageComponent } from './template/home-landing-page/home-landing-page.component';
 import { HttpClient, HttpClientModule } from "@angular/common/http";
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { HttpClient, HttpClientModule } from "@angular/common/http";
     HomeComponent,
     LoginComponent,
     EnquiryComponent,
-    HomeLandingPageComponent
+    HomeLandingPageComponent,
+    
   ],
   imports: [
     BrowserModule,

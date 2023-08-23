@@ -43,7 +43,4 @@ resetform()
   this.enquiryForm.reset();
 }
 
-
-
-
 }

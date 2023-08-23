@@ -18,4 +18,9 @@ export class LoanserviceService {
   {
     return this.http.get("http://localhost:9091/getuserdata/"+userName+"/"+passWord)
   }
+
+  sendMail(data:FormData)
+  {
+    return this.http.post("http://localhost:9091/sendMailWithAttachment",data);
+  }
 }
