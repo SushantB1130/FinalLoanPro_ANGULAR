@@ -1,1 +1,29 @@
-<p>view-enquiry works!</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>AGE</th>
+            <th>EMAIL</th>
+            <th>MOBILE NUMBER</th>
+            <th>PAN CARD NUMBER</th>
+            <th>ENQUIRY STATUS</th>
+            <th>VERIFY ENQUIRY</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of enquiries">
+            <td>{{e.eid}}</td>
+            <td>{{e.firstName}}</td>
+            <td>{{e.lastName}}</td>
+            <td>{{e.age}}</td>
+            <td>{{e.email}}</td>
+            <td>{{e.mobileNumber}}</td>
+            <td>{{e.pancardNumber}}</td>
+            <td>{{e.enquiryStatus}}</td>
+            <td><button (click)="sendtoOE(e.eid)" class="btn btn-primary">Verify</button></td>
+        </tr>
+                         
+    </tbody>
+</table>

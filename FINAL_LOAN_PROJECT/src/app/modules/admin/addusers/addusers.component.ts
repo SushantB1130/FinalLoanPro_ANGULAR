@@ -20,7 +20,7 @@ proimg:any;
 
 ngOnInit(): void {
 
-
+this.adduserFormControlopen()
 }
 
 adduserFormControlopen()
@@ -42,6 +42,19 @@ this.reader.readAsDataURL(this.profilephoto);
 
 saveuser()
 {
+  
+  const f=new FormData();
+  f.append("data",JSON.stringify(this.adduserForm.value));
+  f.append("profile",this.profilephoto);
 
+  this.ls.adduser(f).subscribe((data:any)=>{
+    this.resetf();
+  })
+  
+}
+
+resetf(){
+  this.adduserForm.reset();
+  this.proimg=null;
 }
 }
