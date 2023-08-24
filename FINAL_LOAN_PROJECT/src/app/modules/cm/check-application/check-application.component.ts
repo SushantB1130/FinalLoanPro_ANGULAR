@@ -14,7 +14,7 @@ export class CheckApplicationComponent implements OnInit {
   enquiries:any[];
 
   
-  enquirystatus1:string='CREATED';
+  enquirystatus1:string='APPROVED';
   enquirystatus2:string="no";
   ngOnInit(): void {
     
