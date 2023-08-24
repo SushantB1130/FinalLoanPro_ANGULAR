@@ -46,8 +46,11 @@ export class SendMailComponent implements OnInit{
   
    formData.append("mail",mailstring);
    formData.append("attach",this.attachment);
+   alert(mailstring);
   
-  //  this.ls.sendMail(formData).subscribe();
+this.ls.sendMail(formData).subscribe((data:any)=>{
+ 
+});
   
    alert("Mail Sent");
   }

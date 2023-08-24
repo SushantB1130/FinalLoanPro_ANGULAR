@@ -14,6 +14,7 @@ export class CheckCibilComponent  implements OnInit {
   enquirystatus2:string='no';
 
 cstatus:boolean=false
+cibil:number=0;
 
   enquiries:any[];
 
@@ -28,9 +29,13 @@ cstatus:boolean=false
   getcibil(){
     
       this.cstatus=true;
-      alert(this.cstatus);
-
-  
+     
+  }
+  sendtocredit(eid:number)
+  {
+    this.ls.verifyenq(eid).subscribe((data:any)=>{
+      window.location.reload();
+    });
   }
 
 }

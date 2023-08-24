@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { LoanserviceService } from 'src/app/service/loanservice.service';
 
@@ -7,7 +7,7 @@ import { LoanserviceService } from 'src/app/service/loanservice.service';
   templateUrl: './sendmail.component.html',
   styleUrls: ['./sendmail.component.css']
 })
-export class SendmailComponent {
+export class SendmailComponent implements OnInit{
 
   constructor(private fb:FormBuilder,private ls:LoanserviceService)
   {
@@ -46,8 +46,11 @@ export class SendmailComponent {
   
    formData.append("mail",mailstring);
    formData.append("attach",this.attachment);
+   alert(mailstring);
   
-  //  this.ls.sendMail(formData).subscribe();
+this.ls.sendMail(formData).subscribe((data:any)=>{
+ 
+});
   
    alert("Mail Sent");
   }

@@ -1,0 +1,38 @@
+
+<body class="body">
+  <section class="container">
+    <header>Loan Enquiry Form</header>
+    <form [formGroup]="enquiryForm" class="form" (ngSubmit)="addenquiry()">
+      <div class="input-box">
+        <label>FIRST Name</label>
+        <input type="text" placeholder="Enter First name" required formControlName="firstName" />
+      </div>
+  
+      <div class="input-box">
+        <label>LAST NAME</label>
+        <input type="text" placeholder="Enter Last Name" required formControlName="lastName" />
+      </div>
+      <div class="input-box">
+          <label> AGE</label>
+          <input type="number" placeholder="Enter AGE " required formControlName="age"/>
+        </div>
+      
+    
+        <div class="column">
+          <div class="input-box">
+            <label>PanCard Number</label>
+            <input type="text" placeholder="Enter PAN number" required formControlName="pancardNumber" />
+          </div>
+          <div class="input-box">
+            <label>Mobile Number</label>
+            <input type="number" placeholder="Enter Mobile number" required formControlName="mobileNumber" />
+          </div>
+        </div>
+      <div class="input-box">
+        <label>EMAIL ID</label>
+        <input type="text" placeholder="Domain@gmail.com" required formControlName="email"/>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    </section>
+  </body>

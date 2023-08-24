@@ -1,4 +1,4 @@
-
+<!-- 
 <table class="table table-bordered">
     <thead>
         <tr>
@@ -29,5 +29,48 @@
         </tr>
                          
     </tbody>
-</table>
+</table> -->
+<i class="glyphicon glyphicon-bell" >
+  
+</i>
 
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>AGE</th>
+            <th>EMAIL</th>
+            <th>MOBILE NUMBER</th>
+            <th>PAN CARD NUMBER</th>
+            <th>ENQUIRY STATUS</th>
+            <th>VERIFY ENQUIRY</th>
+            <th>CIBIL SCORE</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of enquiries">
+            <td>{{e.eid}}</td>
+            <td>{{e.firstName}}</td>
+            <td>{{e.lastName}}</td>
+            <td>{{e.age}}</td>
+            <td>{{e.email}}</td>
+            <td>{{e.mobileNumber}}</td>
+            <td>{{e.pancardNumber}}</td>
+            <td>{{e.enquiryStatus}}</td>
+           <td style="margin-bottom: 80px;"><button class="btn btn-success sndbtn" (click)="approvedcase(e.eid)">APPROVE</button>
+            <button class="btn btn-danger sndbtn" (click)="rejectedcase(e.eid)">REJECT</button></td>
+            <td disabled >
+
+                <!-- <div class="spinner-border text-success" role="status" style="tranition:none;" *ngIf="cstatus" >
+                    <span class="sr-only">hii</span>
+                  </div> -->
+                  <h6 type="number" >{{e.cibil.cibilScore}}</h6>
+
+            </td>
+        </tr>
+                         
+    </tbody>
+</table>

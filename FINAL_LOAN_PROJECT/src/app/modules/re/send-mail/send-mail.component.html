@@ -4,20 +4,20 @@
       <form [formGroup]="mailDetailsForm" (ngSubmit)="onSubmitSendMail()">
         <div class="formbold-input-flex">
             <div>
-                <input type="email" name="email" id="email"placeholder="jhon@mail.com" class="formbold-form-input"/>
+                <input type="email" name="email" id="email"placeholder="jhon@mail.com" class="formbold-form-input" formControlName="toMail"/>
                 <label for="email" class="formbold-form-label"> Mail </label>
             </div>
           </div>
           
           <div class="formbold-input-flex">
           <div class="column">
-            <input type="text" formControlName="subject" placeholder="Enter Subject" class="formbold-form-input" />
+            <input type="text" formControlName="subject" placeholder="Enter Subject" class="formbold-form-input" formControlName="subject" />
             <label for="firstname" class="formbold-form-label">Subject </label>
         </div>
           </div>
          
           <div class="formbold-textarea">
-              <textarea  rows="6" formControlName="text" placeholder="Write your message..."class="formbold-form-input"></textarea>
+              <textarea  rows="6" formControlName="text" placeholder="Write your message..."class="formbold-form-input" formControlName="text"></textarea>
               <label for="message" class="formbold-form-label"> Message </label>
           </div>
         
@@ -33,7 +33,7 @@
             </defs>
             </svg>
                Attach files
-            <input type="file" name="upload" id="upload">
+            <input type="file" name="upload" id="upload" (change)="onSelectAttachment($event)">
         </label>
       
           <button class="formbold-btn">Send Mail</button>

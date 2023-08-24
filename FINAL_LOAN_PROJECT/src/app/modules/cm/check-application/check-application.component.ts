@@ -14,7 +14,7 @@ export class CheckApplicationComponent implements OnInit {
   enquiries:any[];
 
   
-  enquirystatus1:string='APPROVED';
+  enquirystatus1:string='CIBIL_CHECKED';
   enquirystatus2:string="no";
   ngOnInit(): void {
     
@@ -22,7 +22,18 @@ export class CheckApplicationComponent implements OnInit {
       this.enquiries=data.responsedata;
     })
   }
+  approvedcase(eid:number)
+  {
+    this.ls.verifyenq(eid).subscribe((data:any)=>{
+      window.location.reload();
+    })
+  }
+  rejectedcase(eid:number){
 
+    this.ls.verifyenq(eid).subscribe((data:any)=>{
+      window.location.reload();
+    })
+  }
 
 
 }

@@ -22,7 +22,8 @@ export class LoanserviceService {
 
   sendMail(data:FormData)
   {
-    return this.http.post("http://localhost:9091/sendMailWithAttachment",data);
+   alert("data in service")
+    return this.http.post("http://localhost:9091/sendmailwithattachment",data);
   }
 
   
@@ -56,5 +57,6 @@ export class LoanserviceService {
   {
     return this.http.get("http://localhost:9091/getsingleuser/"+userType);
   }
+
 
 }
