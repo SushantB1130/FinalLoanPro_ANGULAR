@@ -24,7 +24,8 @@ const routes: Routes = [
 
                   { path:'oe', loadChildren:()=>import('src/app/modules/oe/oe.module').then(e=>e.OeModule)},
                   {path: 're',loadChildren:()=>import('src/app/modules/re/re.module').then(e=>e.ReModule)},
-                  {path: 'admin',loadChildren:()=>import('src/app/modules/admin/admin.module').then(e=>e.AdminModule)}
+                  {path: 'admin',loadChildren:()=>import('src/app/modules/admin/admin.module').then(e=>e.AdminModule)},
+                  {path:'cm',loadChildren:()=>import('src/app/modules/cm/cm.module').then(e=>e.CmModule)}
     ]
   }
 ];

@@ -53,23 +53,11 @@ export class LoginComponent implements OnInit {
           this.router.navigateByUrl('/dash/admin')
       }
 
-      else if(username=='CM' && password=='CM@123')
-      {
+    else if(data.responsedata.userType=='cm')
+    {
         localStorage.setItem("userType","cm");
         this.router.navigateByUrl('/dash/cm')
-      }
-
-      else if(username=='CM' && password=='CM@123')
-      {
-        localStorage.setItem("userType","cm");
-        this.router.navigateByUrl('/dash/cm')
-      }
-
-      else if(username=='CM' && password=='CM@123')
-      {
-        localStorage.setItem("userType","cm");
-        this.router.navigateByUrl('/dash/cm')
-      }
+    }
 
       else
       {

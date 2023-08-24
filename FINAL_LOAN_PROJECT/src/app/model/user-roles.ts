@@ -22,6 +22,13 @@ export class UserRoles {
           {label:'SALES & TARGET',path:'sales'},
          
         
+        ],
+
+        cm:[
+
+          {label:'Check Appl',path:'checkAppl'},
+          {label:'Genrate Sanction',path:'genSanction'},
+          {label:'Send Mail',path:'sendMaiCM'}
         ]
   }
 
