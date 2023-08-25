@@ -37,5 +37,8 @@ export class AppSideMenuComponent implements OnInit{
   {
     this.router.navigateByUrl('/dash/'+this.userType+"/"+path)
   }
-
+  clearUser()
+  {
+    localStorage.clear();
+  }
 }

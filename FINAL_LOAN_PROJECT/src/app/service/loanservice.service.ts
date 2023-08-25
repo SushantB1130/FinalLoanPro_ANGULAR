@@ -57,6 +57,11 @@ export class LoanserviceService {
   {
     return this.http.get("http://localhost:9091/getsingleuser/"+userType);
   }
+  getcibil(e:any)
+{
+  e.cibil={};
+    return this.http.put("http://localhost:9091/getcibil",e);
+}
 
 
 }
