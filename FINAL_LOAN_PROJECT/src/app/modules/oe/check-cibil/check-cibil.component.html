@@ -25,14 +25,14 @@
             <td>{{e.mobileNumber}}</td>
             <td>{{e.pancardNumber}}</td>
             <td>{{e.enquiryStatus}}</td>
-            <td><button class="btn btn-primary" (click)="getcibil(e)" [hidden]="e.enquiryStatus=='CIBIL_CHECKED'">Check Cibil</button>
-            <button class="btn btn-primary" (click)="sendtocredit(e.eid)" [hidden]="e.enquiryStatus=='CIBIL_REQUIRED'" >Send To Credit</button></td>
-            <td  >
+            <td><button class="btn btn-primary" (click)="getcibil(e)" *ngIf="cbscore=='0'">Check Cibil</button>
+            <button class="btn btn-primary" (click)="sendtocredit(e.eid)"*ngIf="cbscore=='1'">>Send To Credit</button></td>
+            <td *ngIf="cbscore=='0'">
 
                 <!-- <div class="spinner-border text-success" role="status" style="tranition:none;" *ngIf="cstatus" >
                     <span class="sr-only">hii</span>
                   </div> -->
-                  <h6 disabled type="number" [hidden]="!e.cibil.cibilScore">{{e.cibil.cibilScore}}</h6>
+                  <h6 disabled type="number" >{{e.cibil.cibilScore}}</h6>
 
             </td>
         </tr>

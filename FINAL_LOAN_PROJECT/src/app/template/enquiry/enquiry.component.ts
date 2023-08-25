@@ -12,6 +12,8 @@ export class EnquiryComponent implements OnInit {
 constructor(private ls:LoanserviceService,private fb:FormBuilder){}
 
 enquiryForm:FormGroup;
+respostatus:number=0;
+spinner:boolean=false;
 
   ngOnInit(): void {
   
@@ -29,11 +31,12 @@ enquiryForm:FormGroup;
 
 addenquiry()
 {
-
-  this.ls.addenquiry(this.enquiryForm.value).subscribe((data:any[])=>{
-    
+  this.spinner=true;
+  this.ls.addenquiry(this.enquiryForm.value).subscribe((data:any)=>{
+    alert(data.responsemsg);
+    this.spinner=false;
     this.resetform();
-    alert("data save succefully");
+   
   });
 
 }

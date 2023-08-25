@@ -5,25 +5,21 @@
             <th>CASE ID</th>
             <th>First Name</th>
             <th>Last Name</th>
-            <th>AGE</th>
-            <th>EMAIL</th>
-            <th>MOBILE NUMBER</th>
             <th>PAN CARD NUMBER</th>
             <th>ENQUIRY STATUS</th>
-            <th>VIEW APPLICATION FORM</th>
+            <th>CUSTOMER VERIFICATION STATUS</th>
+            <th>DISBURSED</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let e of ">
             <td>{{e.caseid}}</td>
             <td>{{e.firstName}}</td>
-            <td>{{e.lastName}}</td>
-            <td>{{e.age}}</td>
-            <td>{{e.email}}</td>
-            <td>{{e.mobileNumber}}</td>
+            <td>{{e.lastName}}</td> 
             <td>{{e.pancardNumber}}</td>
             <td>{{e.enquiryStatus}}</td>
-           <td style="margin-bottom: 80px;"><button class="btn btn-success sndbtn">VIEW</button></td>
+            <td>{{e.enquiryStatus}}</td>
+           <td style="margin-bottom: 80px;"><button class="btn btn-success sndbtn">DISBURSED</button></td>
          
         </tr>
                          

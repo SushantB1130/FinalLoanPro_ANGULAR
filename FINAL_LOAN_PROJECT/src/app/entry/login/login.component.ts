@@ -59,6 +59,11 @@ export class LoginComponent implements OnInit {
         this.router.navigateByUrl('/dash/cm')
     }
 
+    else if(data.responsedata.userType=='account')
+    {
+        localStorage.setItem("userType","account");
+        this.router.navigateByUrl('/dash/account')
+    }
       else
       {
         alert('Enter Valid Login Credentials');

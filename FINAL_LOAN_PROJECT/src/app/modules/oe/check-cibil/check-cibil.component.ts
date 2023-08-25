@@ -11,9 +11,10 @@ export class CheckCibilComponent  implements OnInit {
   constructor(private ls:LoanserviceService){}
 
   enquirystatus1:string="CIBIL_REQUIRED";
-  enquirystatus2:string='CIBIL_CHECKED';
+  enquirystatus3:string='CIBIL_CHECKED';
+  enquirystatus2:string='no';
 
-  cibilscore:number;
+  cbscore:number=0;
 
 cstatus:boolean=false
 cibil:number=0;
@@ -23,6 +24,7 @@ cibil:number=0;
   ngOnInit(): void {
     
   this.getData();
+ 
 
   }
   getData()
@@ -34,17 +36,22 @@ cibil:number=0;
   }
   getcibil(e:any){
     
-
+     
       this.ls.getcibil(e).subscribe((data:any)=>{
+        this.cbscore=1;
 
       })
-      window.location.reload();
-      this.getData();
+     
+      this.ls.getenquiry(this.enquirystatus3,this.enquirystatus2).subscribe((data:any)=>{
+        this.enquiries=data.responsedata;
+       
+      });
      
   }
   sendtocredit(eid:number)
   {
     this.ls.verifyenq(eid).subscribe((data:any)=>{
+      this.cbscore=0;
       window.location.reload();
     });
   }

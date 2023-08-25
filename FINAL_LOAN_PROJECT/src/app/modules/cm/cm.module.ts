@@ -11,6 +11,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
 import { ApplicationFormComponent } from './application-form/application-form.component';
+import { CPVComponent } from './cpv/cpv.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ApplicationFormComponent } from './application-form/application-form.co
     GenerateSanctionComponent,
     SendMailCMComponent,
     ApplicationFormComponent,
+    CPVComponent,
     
   ],
   imports: [

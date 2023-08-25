@@ -33,6 +33,11 @@ export class AppHeaderComponent implements OnInit{
      
       this.userType='Credit Manager'
     }
+    else if(ut=='account')
+    {
+     
+      this.userType='Account Manager'
+    }
 
   }
 

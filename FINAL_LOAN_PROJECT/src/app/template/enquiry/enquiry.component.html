@@ -32,7 +32,11 @@
       <label>EMAIL ID</label>
       <input type="text" placeholder="Domain@gmail.com" required formControlName="email"/>
     </div>
-    <button type="submit">Submit</button>
+    <button type="submit" [hidden]="spinner">Submit</button>
+    <button [hidden]="!spinner"><div class="spinner-border" role="status" >
+        
+    </div></button>
+   
   </form>
   </section>
 </body>

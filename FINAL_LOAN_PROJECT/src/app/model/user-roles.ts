@@ -29,7 +29,15 @@ export class UserRoles {
           {label:'Check Cibil',path:'checkAppl'},
           {label:'Genrate Sanction',path:'genSanction'},
           {label:'Send Mail',path:'sendMaiCM'},
-          {label:'Application Form',path:'appliForm'}
+          {label:'Application Form',path:'appliForm'},
+          {label:'Initiate CPV',path:'cpv'}
+        ],
+        
+        account:[
+          {label:'Disbursed',path:'disb'},
+          {label:'Ledger',path:'ledger'},
+          {label:'ReminderMail',path:'rem'},
+          {label:'Default List',path:'default'}
         ]
   }
 
