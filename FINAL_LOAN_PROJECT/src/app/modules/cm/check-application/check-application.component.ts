@@ -20,6 +20,7 @@ export class CheckApplicationComponent implements OnInit {
     
     this.ls.getenquiry(this.enquirystatus1,this.enquirystatus2).subscribe((data:any)=>{
       this.enquiries=data.responsedata;
+      console.log(data)
     })
   }
   approvedcase(eid:number)
