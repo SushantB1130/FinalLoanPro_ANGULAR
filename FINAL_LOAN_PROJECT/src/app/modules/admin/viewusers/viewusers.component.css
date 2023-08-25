@@ -2,6 +2,12 @@ table{
     margin-top: 10px;
    
 }
+th{
+  text-align: center;
+}
+td{
+  text-align: center;
+}
 
 section {
     display: table;
