@@ -1,4 +1,4 @@
-<table class="table table-bordered">
+<table class="table table-bordered ">
     <thead>
         <tr>
             <th>ID</th>
@@ -14,9 +14,23 @@
             <td>{{e.userId}}</td>
             <td>{{e.name}}</td>
             <td>{{e.email}}</td>
-            <td><img [src]="'data:image/png;base64,'+e.profilephoto" width="150px" height="150px"/></td>
+            <td><img [src]="'data:image/png;base64,'+e.profilephoto" width="100px" height="100px"/></td>
             <td>{{e.userType}}</td>
-            <td><button class="btn btn-danger"(click)="deleteuser(e.userId)">Delete User</button></td>
+            <td>
+                <section>
+                <div class="example-button-row">
+                  <div class="example-flex-container">
+                    <div class="example-button-container">
+                      <button mat-fab color="warn" aria-label="Example icon button with a delete icon" (click)="deleteuser(e.userId)">
+                        <mat-icon>delete</mat-icon>
+                      </button>
+                   
+                    </div>
+                  </div>
+                </div>
+              </section></td>
+            <mat-divider></mat-divider>
+
         </tr>
                          
     </tbody>

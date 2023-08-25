@@ -26,9 +26,10 @@ export class UserRoles {
 
         cm:[
 
-          {label:'Check Appl',path:'checkAppl'},
+          {label:'Check Cibil',path:'checkAppl'},
           {label:'Genrate Sanction',path:'genSanction'},
-          {label:'Send Mail',path:'sendMaiCM'}
+          {label:'Send Mail',path:'sendMaiCM'},
+          {label:'Application Form',path:'appliForm'}
         ]
   }
 

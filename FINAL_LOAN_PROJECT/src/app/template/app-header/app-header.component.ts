@@ -27,11 +27,13 @@ export class AppHeaderComponent implements OnInit{
      
       this.userType='Administrator'
     }
+
     else if(ut=='cm')
     {
      
       this.userType='Credit Manager'
     }
+
   }
 
 }

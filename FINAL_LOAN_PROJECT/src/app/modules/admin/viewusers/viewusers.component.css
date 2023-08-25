@@ -1,4 +1,42 @@
 table{
-    margin-top: 20px;
+    margin-top: 10px;
    
 }
+
+section {
+    display: table;
+  }
+  
+  .example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 9px;
+    min-width: 100px;
+  }
+  
+  .example-button-row {
+    display: table-cell;
+    max-width: 50px;
+  }
+  
+  .example-button-row .mat-mdc-button-base {
+    margin: 9px 8px 8px 0;
+  }
+  
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    align-items: center;
+    width: 120px;
+  }
+  button{
+   
+  }
+  

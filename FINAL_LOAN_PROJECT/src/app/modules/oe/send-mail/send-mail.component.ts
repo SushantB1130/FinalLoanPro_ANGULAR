@@ -49,7 +49,7 @@ export class SendMailComponent implements OnInit{
    alert(mailstring);
   
 this.ls.sendMail(formData).subscribe((data:any)=>{
- 
+   window.location.reload();
 });
   
    alert("Mail Sent");

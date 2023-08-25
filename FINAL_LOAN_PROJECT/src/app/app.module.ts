@@ -15,7 +15,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { EnquiryComponent } from './template/enquiry/enquiry.component';
 import { HomeLandingPageComponent } from './template/home-landing-page/home-landing-page.component';
 import { HttpClient, HttpClientModule } from "@angular/common/http";
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -31,12 +34,15 @@ import { HttpClient, HttpClientModule } from "@angular/common/http";
     EnquiryComponent,
     HomeLandingPageComponent,
     
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatButtonModule, MatDividerModule, MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

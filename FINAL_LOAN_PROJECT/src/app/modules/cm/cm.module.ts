@@ -6,16 +6,26 @@ import { CheckApplicationComponent } from './check-application/check-application
 import { GenerateSanctionComponent } from './generate-sanction/generate-sanction.component';
 import { SendMailCMComponent } from './send-mail-cm/send-mail-cm.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatButtonModule} from '@angular/material/button';
+import { ApplicationFormComponent } from './application-form/application-form.component';
 
 @NgModule({
   declarations: [
     CheckApplicationComponent,
     GenerateSanctionComponent,
-    SendMailCMComponent
+    SendMailCMComponent,
+    ApplicationFormComponent,
+    
   ],
   imports: [
     CommonModule,
-    CmRoutingModule
+    CmRoutingModule,
+    ReactiveFormsModule,
+    MatButtonModule, MatDividerModule, MatIconModule
+   
   ]
 })
 export class CmModule { }

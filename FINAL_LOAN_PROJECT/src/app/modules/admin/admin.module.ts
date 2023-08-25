@@ -7,7 +7,9 @@ import {  FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ViewusersComponent } from './viewusers/viewusers.component';
 import { SendmailComponent } from './sendmail/sendmail.component';
 import { SaleschartComponent } from './saleschart/saleschart.component';
-
+import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { SaleschartComponent } from './saleschart/saleschart.component';
     CommonModule,
     AdminRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatButtonModule, MatDividerModule, MatIconModule
   ]
 })
 export class AdminModule { }

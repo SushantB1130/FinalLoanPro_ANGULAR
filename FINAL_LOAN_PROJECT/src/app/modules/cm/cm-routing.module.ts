@@ -4,10 +4,12 @@ import { CheckApplicationComponent } from './check-application/check-application
 import { GenerateSanctionComponent } from './generate-sanction/generate-sanction.component';
 import { SendMailCMComponent } from './send-mail-cm/send-mail-cm.component';
 
+
 const routes: Routes = [
   {path:'checkAppl',component:CheckApplicationComponent},
   {path:'genSanction',component:GenerateSanctionComponent},
-  {path:'sendMaiCM',component:SendMailCMComponent}
+  {path:'sendMaiCM',component:SendMailCMComponent},
+  // {path:'appliForm',component:ApplicationFormComponent}
 ];
 
 @NgModule({
