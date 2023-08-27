@@ -12,7 +12,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
 import { ApplicationFormComponent } from './application-form/application-form.component';
 import { CPVComponent } from './cpv/cpv.component';
-
+import {MatExpansionModule} from '@angular/material/expansion';
 @NgModule({
   declarations: [
     CheckApplicationComponent,
@@ -26,7 +26,7 @@ import { CPVComponent } from './cpv/cpv.component';
     CommonModule,
     CmRoutingModule,
     ReactiveFormsModule,
-    MatButtonModule, MatDividerModule, MatIconModule
+    MatButtonModule, MatDividerModule, MatIconModule,MatExpansionModule
    
   ]
 })

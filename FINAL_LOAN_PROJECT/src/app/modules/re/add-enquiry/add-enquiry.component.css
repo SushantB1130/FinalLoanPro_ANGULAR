@@ -20,7 +20,7 @@ body {
   justify-content: center;
   padding: 30px;
   background: rgb(255, 252, 252);
-
+  margin-top: 110px;
 }
 .container {
   position: relative;
