@@ -1,16 +1,17 @@
+<div class="main-border">
 <form style="margin-top: 40px">
 <mat-accordion>
    
     <mat-expansion-panel hideToggle>
-      <mat-expansion-panel-header>
+      <mat-expansion-panel-header style="background-color: rgb(84, 206, 97);">
        
-        <mat-panel-title>
+        <mat-panel-title >
      
      
         </mat-panel-title>
         <hr>
-        <mat-panel-description>
-          Enter Customer Details
+        <mat-panel-description style="color: rgb(255, 255, 255); font-size: 18px; font: italic;" >
+            Enter Customer Details
         </mat-panel-description>
       </mat-expansion-panel-header>
      
@@ -58,6 +59,9 @@
 
     </div>   
    </mat-expansion-panel>
+  </mat-accordion>
+
+<mat-accordion> 
     <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title>
@@ -354,7 +358,7 @@
           <label>Address Proof:-</label>
           <!-- <img src="{{image}}" width=10% height = 25%> --> 
         <input type="file">
-      </div>  
+      </div> 
       <div class="col-md-6 mt-md-0 mt-3">
         <label>Pan Card:-</label>
         <!-- <img src="{{image}}" width=10% height = 25%> --> 
@@ -381,13 +385,15 @@
   <label>Salary Slip:-</label>
   <!-- <img src="{{image}}" width=10% height = 25%> --> 
 <input type="file">
+
+<button type="button" class="btn btn-primary">Save</button>
 </div> 
 
   </div> 
 </mat-expansion-panel>
-<button type="button" class="btn btn-primary">Save</button>
+
 
   </mat-accordion>
 
 </form>
-  
+</div>  
