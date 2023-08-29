@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class LoanserviceService {
 
+
   constructor(private http:HttpClient) { }
 
   addenquiry(enq:any)
@@ -63,5 +64,9 @@ export class LoanserviceService {
     return this.http.put("http://localhost:9091/getcibil",e);
 }
 
+getsingleenq(pancardNumber:string)
+{
+  return this.http.get("http://localhost:9091/getsingleEnq/"+pancardNumber);
+}
 
 }

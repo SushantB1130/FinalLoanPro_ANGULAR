@@ -11,7 +11,7 @@ import { HeaderComponent } from './template/header/header.component';
 import { AppDashBoardComponent } from './entry/app-dash-board/app-dash-board.component';
 import { HomeComponent } from './entry/home/home.component';
 import { LoginComponent } from './entry/login/login.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EnquiryComponent } from './template/enquiry/enquiry.component';
 import { HomeLandingPageComponent } from './template/home-landing-page/home-landing-page.component';
 import { HttpClient, HttpClientModule } from "@angular/common/http";
@@ -19,6 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
+import { FillapplicationformComponent } from './fillapplicationform/fillapplicationform.component';
+import { MatExpansionModule, MatExpansionPanel } from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import {MatButtonModule} from '@angular/material/button';
     LoginComponent,
     EnquiryComponent,
     HomeLandingPageComponent,
+    FillapplicationformComponent,
     
     
   ],
@@ -42,7 +45,8 @@ import {MatButtonModule} from '@angular/material/button';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatButtonModule, MatDividerModule, MatIconModule
+    MatButtonModule, MatDividerModule, MatIconModule,MatExpansionModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

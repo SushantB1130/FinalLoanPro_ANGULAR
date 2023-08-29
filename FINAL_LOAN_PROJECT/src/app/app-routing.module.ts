@@ -7,8 +7,10 @@ import { LoginComponent } from './entry/login/login.component';
 import { AppDashBoardComponent } from './entry/app-dash-board/app-dash-board.component';
 import { EnquiryComponent } from './template/enquiry/enquiry.component';
 import { HomeLandingPageComponent } from './template/home-landing-page/home-landing-page.component';
+import { FillapplicationformComponent } from './fillapplicationform/fillapplicationform.component';
 
 const routes: Routes = [
+  {path:"fillapp",component:FillapplicationformComponent},
   {
     path: '', component:HomeComponent, children:[
                                                   {path:'', component:HomeLandingPageComponent},
