@@ -1,405 +1,76 @@
-<div class="main-border">
-<form style="margin-top: 40px">
-<mat-accordion>
-   
-    <mat-expansion-panel hideToggle>
-      <mat-expansion-panel-header >
-       
-        <mat-panel-title >
-     
-     
-        </mat-panel-title>
-        <hr>
-        <mat-panel-description  >
-            Enter Customer Basic Details
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-     
-      <div class="row">    <!--Customer Details Entity-->
-        <div class="col-md-6 mt-md-0 mt-3">
-              <label>Customer Name</label>
-            <input type="text" class="form-control" required>
-        </div><br>
+<!-- 
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>AGE</th>
+            <th>EMAIL</th>
+            <th>MOBILE NUMBER</th>
+            <th>PAN CARD NUMBER</th>
+            <th>ENQUIRY STATUS</th>
+            <th style="width: 200px;">ACTION</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of enquiries">
+            <td>{{e.eid}}</td>
+            <td>{{e.firstName}}</td>
+            <td>{{e.lastName}}</td>
+            <td>{{e.age}}</td>
+            <td>{{e.email}}</td>
+            <td>{{e.mobileNumber}}</td>
+            <td>{{e.pancardNumber}}</td>
+            <td style="color: rgb(20, 201, 20);">{{e.enquiryStatus}}</td>
+            <td style="margin-bottom: 80px;"><button class="btn btn-success sndbtn">APPROVE</button>
+                <button class="btn btn-danger sndbtn">REJECT</button></td>
+           
+        </tr>
+                         
+    </tbody>
+</table> -->
+<i class="glyphicon glyphicon-bell" >
   
-        <div class="col-md-3 mt-md-0 mt-3">
-            <label>Age</label>
-          <input type="number" class="form-control" required>
-      </div>
-      <div class="row">
-        <div class="col-md-6 mt-md-0 mt-3">
-            <label>Date Of Birth</label>
-            <input type="date" class="form-control" required>
-        </div>
-        <div class="col-md-6 mt-md-0 mt-3">
-            <label>Gender</label>
-         
-            <div class="d-flex align-items-center mt-1">
-                <select id="sub" required>
-                    <option value="" selected hidden>Choose Option</option>
-                    <option value="Maths">Male</option>
-                    <option value="Science">Female</option>
-                    <option value="Social">Other</option>
-                </select>
-            </div>
-        </div>
-        <div class="col-md-6 mt-md-0 mt-3">
-          <label>Email</label>
-          <input type="email" class="form-control" required>
-      </div>
-      <div class="col-md-6 mt-md-0 mt-3">
-          <label>Mobile Number</label>
-          <input type="number" class="form-control" required>
-      </div>
-
-      <div class="col-md-6 mt-md-0 mt-3">
-          <label>Total Loan Required</label>
-          <input type="number" class="form-control" required>
-      </div>
-    </div>
-
-    </div>   
-   </mat-expansion-panel>
-  </mat-accordion>
-
-<mat-accordion> 
-    <mat-expansion-panel>
-      <mat-expansion-panel-header >
-        <mat-panel-title>
-       
-        </mat-panel-title>
-        <mat-panel-description >
-         Address Details 
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-      <div class="row">
-      <div class="col-md-6 mt-md-0 mt-3">
-        <label>Customer Address</label>
-        <input type="text" class="form-control" required>
-      
-    </div>
-    <div class="col-md-6 mt-md-0 mt-3">
-        <label>City</label>
-     
-        <div class="d-flex align-items-center mt-2">
-            <select id="sub" required>
-                <option value="" selected hidden>Choose Option</option>
-                <option value="Maths">Pimpari Chinchwad</option>
-                <option value="Science">Pune</option>
-                <option value="Social">Mumbai</option>
-                <option value="Science">Amravati</option>
-                <option value="Social">Nagpur</option>
-                <option value="Social">Ralegaon</option>
-            </select>
-        </div>
-    </div>
-    <div class="col-md-6 mt-md-0 mt-3">
-        <label>District</label>
-     
-        <div class="d-flex align-items-center mt-2">
-            <select id="sub" required>
-                <option value="" selected hidden>Choose Option</option>
-                <option value="Maths">Pune</option>
-                <option value="Science">Mumbai</option>
-                <option value="Social">Yavatmal</option>
-                <option value="Science">Amravati</option>
-                <option value="Social">Nagpur</option>
-               
-            </select>
-        </div>
-    </div>
-    <div class="col-md-6 mt-md-0 mt-3">
-        <label>State</label>
-     
-        <div class="d-flex align-items-center mt-2">
-            <select id="sub" required>
-                <option value="" selected hidden>State</option>
-                <option value="Maths">Maharashtra</option>
-                <option value="Science">Gujrat</option>
-                <option value="Social">Madhya Pradesh</option>
-                <option value="Science">Jharkhand</option>
-                <option value="Social">Bihar</option>
-               
-            </select>
-        </div>
-    </div>
-  </div> 
-</mat-expansion-panel>
-  </mat-accordion>
-  <mat-accordion>
-   
-    <mat-expansion-panel hideToggle>
-      <mat-expansion-panel-header >
-       
-        <mat-panel-title>
-     
-     
-        </mat-panel-title>
-        <hr>
-        <mat-panel-description>
-          Enter Customer Profession Details
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-     
-      <div class="row">    <!--Customer Details Entity-->
-         <!--Profession Entity-->
-         <div class="col-md-6 mt-md-0 mt-3"> 
-          <label>Profession</label>
-       
-          <div class="d-flex align-items-center mt-2">
-              <select id="sub" required>
-                  <option value="" selected hidden>Choose Your Profession</option>
-                  <option value="">Salaried Government Employee</option>
-                  <option value="">Salaried PVT LTD. Employee</option>
-                  <option value="">Self Employeed Professional</option>
-                  <option value="">Self Employeed Non-Professional</option>
-                  <option value="">Freelancer</option>
-                  <option value="">Student</option>
-              </select>
-          </div>
-      </div>
-
-      <div class="col-md-6 mt-md-0 mt-3">
-          <label>Company Name</label>
-          <input type="text" class="form-control" required>
-        
-      </div>  
-    </div>   
-   </mat-expansion-panel>
-   </mat-accordion>
-  <mat-accordion>
-    <mat-expansion-panel>
-      <mat-expansion-panel-header >
-        <mat-panel-title>
-       
-        </mat-panel-title>
-        <mat-panel-description>
-         Enter Current Loan Details
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-      <div class="row">
-        <div class="col-md-6 mt-md-0 mt-3">
-          <label>Loan Amount</label>
-          <input type="number" class="form-control" required>
-        
-      </div>
-      <div class="col-md-6 mt-md-0 mt-3">
-          <label>Rate Of Interest</label>
-          <input type="number" class="form-control" required>
-        
-      </div>
-
-      <div class="col-md-6 mt-md-0 mt-3">
-          <label>Tenure</label>
-          <input type="number" class="form-control" required>
-        
-      </div>
-      <div class="col-md-6 mt-md-0 mt-3">
-          <label>Total Amount To Be Paid Double</label>
-          <input type="number" class="form-control" required>
-        
-      </div>
-      <div class="col-md-6 mt-md-0 mt-3">
-          <label>Processing Fees</label>
-          <input type="number" class="form-control" required>
-      </div>
-      <div class="col-md-6 mt-md-0 mt-3">
-          <label>Total Interest</label>
-          <input type="number" class="form-control" required>
-        
-      </div>
-
-      <div class="col-md-6 mt-md-0 mt-3">
-          <label>Sanction Date</label>
-          <input type="text" class="form-control" required>
-      </div>
-      <div class="col-md-6 mt-md-0 mt-3">
-          <label>Remark</label>
-          <input type="text" class="form-control" required>
-        
-      </div>
-
-      <div class="col-md-6 mt-md-0 mt-3">
-          <label>Status</label>
-          <input type="text" class="form-control" required>
-
-      </div>
-  </div> 
-</mat-expansion-panel>
-  </mat-accordion>
-  <mat-accordion>
-   
-    <mat-expansion-panel hideToggle>
-      <mat-expansion-panel-header >
-       
-        <mat-panel-title>
-     
-     
-        </mat-panel-title>
-        <hr>
-        <mat-panel-description>
-          Enter EMI Details
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-     
-      <div class="row">    <!--Customer Details Entity-->
-        <div class="col-md-6 mt-md-0 mt-3">
-          <label>Emi Amount Monthly</label>
-          <input type="number" class="form-control" required>
-        
-      </div>
-      <div class="col-md-6 mt-md-0 mt-3">
-          <label>Next Emi Due Date</label>
-          <input type="text" class="form-control" required>
-        
-      </div>
-      <div class="col-md-6 mt-md-0 mt-3">
-          <label>Previous Emi Status</label>
-          <input type="text" class="form-control" required>
-        
-      </div>
-
-    </div>   
-   </mat-expansion-panel>
-   </mat-accordion>
-  <mat-accordion> 
-    <mat-expansion-panel>
-      <mat-expansion-panel-header >
-        <mat-panel-title>
-       
-        </mat-panel-title>
-        <mat-panel-description>
-         Enter Account Details Information 
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-      <div class="row">
-        <div class="col-md-6 mt-md-0 mt-3"> 
-          <label>Bank Account Type</label>
-          <div>
-              <select id="sub" required style="width:400px ;">
-                  <option value="" selected hidden>Choose Your Account Type</option>
-                  <option value="">Savings</option>
-                  <option value="">Current</option>
-              </select>  
-          </div> 
-          
-      </div>
-      <div class="col-md-6 mt-md-0 mt-3">
-          <label>Bank Account Number</label>
-          <input type="text" class="form-control" required>
-        
-      </div>
-      <div class="col-md-6 mt-md-0 mt-3">
-          <label>Account Holder Name</label>
-          <input type="text" class="form-control" required>
-        
-      </div>
-      <div class="col-md-6 mt-md-0 mt-3">
-          <label>Bank Name</label>
-          <input type="text" class="form-control" required>
-        
-      </div>  
-  </div> 
-</mat-expansion-panel>
-  </mat-accordion>
-  
-  <mat-accordion>
-   
-    <mat-expansion-panel hideToggle>
-      <mat-expansion-panel-header>
-       
-        <mat-panel-title>
-     
-     
-        </mat-panel-title>
-        <hr>
-        <mat-panel-description>
-          Enter Guarantor Details
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-     
-      <div class="row">    <!--Customer Details Entity-->
-        <div class="col-md-6 mt-md-0 mt-3">
-          <label>Guarantor Name</label>
-          <input type="text" class="form-control" required>
-        
-      </div>
-      <div class="col-md-6 mt-md-0 mt-3"> 
-          <label>Guarantor Relationship With Customer</label>
-          <div>
-              <select id="sub" required style="width:400px ;">
-                  <option value="" selected hidden>Choose Your Relationship</option>
-                  <option value="">Father</option>
-                  <option value="">Mother</option>
-                  <option value="">Brother</option>
-                  <option value="">Wife</option>
-                  <option value="">Sister</option>
-                  <option value="">Friend</option>
-              </select>  
-          </div> 
-          
-      </div>
-   
-      <div class="col-md-6 mt-md-0 mt-3">
-          <label>Guarantor Aadharcard Number</label>
-          <input type="number" class="form-control" required>
-        
-      </div>  
-         
-
-    </div>   
-   </mat-expansion-panel>
-   </mat-accordion>
-  <mat-accordion>
-    <mat-expansion-panel>
-      <mat-expansion-panel-header >
-        <mat-panel-title>
-       
-        </mat-panel-title>
-        <mat-panel-description>
-       Upload Customer Documents
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-      <div class="row">
-        <div class="col-md-6 mt-md-0 mt-3">
-          <label>Address Proof:-</label>
-          <!-- <img src="{{image}}" width=10% height = 25%> --> 
-        <input type="file">
-      </div> 
-      <div class="col-md-6 mt-md-0 mt-3">
-        <label>Pan Card:-</label>
-        <!-- <img src="{{image}}" width=10% height = 25%> --> 
-      <input type="file">
-    </div>  
-    <div class="col-md-6 mt-md-0 mt-3">
-      <label>Aadhar Card:-</label>
-      <!-- <img src="{{image}}" width=10% height = 25%> --> 
-    <input type="file">
-  </div> 
-  <div class="col-md-6 mt-md-0 mt-3">
-    <label>Photo:-</label>
-    <!-- <img src="{{image}}" width=10% height = 25%> --> 
-  <input type="file">
-</div> 
-   
-<div class="col-md-6 mt-md-0 mt-3">
-  <label>Signature:-</label>
-  <!-- <img src="{{image}}" width=10% height = 25%> --> 
-<input type="file">
-</div> 
-
-<div class="col-md-6 mt-md-0 mt-3">
-  <label>Salary Slip:-</label>
-  <!-- <img src="{{image}}" width=10% height = 25%> --> 
-<input type="file">
-
-<button type="button" class="btn btn-primary">Save</button>
-</div> 
-
-  </div> 
-</mat-expansion-panel>
+</i>
 
 
-  </mat-accordion>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>AGE</th>
+            <th>EMAIL</th>
+            <th>MOBILE NUMBER</th>
+            <th>PAN CARD NUMBER</th>
+            <th>ENQUIRY STATUS</th>
+            <th>VERIFY ENQUIRY</th>
+            <th>CIBIL SCORE</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of ">
+            <td>{{e.eid}}</td>
+            <td>{{e.firstName}}</td>
+            <td>{{e.lastName}}</td>
+            <td>{{e.age}}</td>
+            <td>{{e.email}}</td>
+            <td>{{e.mobileNumber}}</td>
+            <td>{{e.pancardNumber}}</td>
+            <td>{{e.enquiryStatus}}</td>
+           <td style="margin-bottom: 80px;"><button class="btn btn-success sndbtn" (click)="approvedcase(e.eid)"></button>
+            <button class="btn btn-danger sndbtn" (click)="rejectedcase(e.eid)">REJECT</button></td>
+            <td disabled >
 
-</form>
-</div>  
+                <!-- <div class="spinner-border text-success" role="status" style="tranition:none;" *ngIf="cstatus" >
+                    <span class="sr-only">hii</span>
+                  </div> -->
+                  <h6 type="number" >{{e.cibil.cibilScore}}</h6>
+
+            </td>
+        </tr>
+                         
+    </tbody>
+</table>

@@ -29,7 +29,7 @@ export class UserRoles {
           {label:'Check Cibil',path:'checkAppl'},
           {label:'Genrate Sanction',path:'genSanction'},
           {label:'Send Mail',path:'sendMaiCM'},
-          {label:'Application Form',path:'appliForm'},
+          {label:'View Application',path:'appliForm'},
           {label:'Initiate CPV',path:'cpv'}
         ],
         
