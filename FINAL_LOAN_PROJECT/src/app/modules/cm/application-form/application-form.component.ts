@@ -10,31 +10,31 @@ export class ApplicationFormComponent implements OnInit {
 
   constructor(private ls:LoanserviceService) {}
 
-  enquiries:any[];
+  customers:any[];
 
   
-  enquirystatus1:string='CIBIL_CHECKED';
-  enquirystatus2:string="no";
+  customerstatus:string='INPROCESS';
+  customerstatus2:string="no";
+
   ngOnInit(): void {
     
-    this.ls.getenquiry(this.enquirystatus1,this.enquirystatus2).subscribe((data:any)=>{
-      this.enquiries=data.responsedata;
-      console.log(data)
-    })
+    this.getcustomers();
   }
-  approvedcase(eid:number)
+
+  getcustomers()
   {
-    this.ls.verifyenq(eid).subscribe((data:any)=>{
-      window.location.reload();
-    })
-  }
-  rejectedcase(eid:number){
-
-    this.ls.verifyenq(eid).subscribe((data:any)=>{
-      window.location.reload();
+    this.ls.getcustomers(this.customerstatus,this.customerstatus2).subscribe((data:any)=>{
+      this.customers=data.responsedata;
+      
     })
   }
 
+  initiatetCPV(customerId:number)
+  {
+    this.ls.initiateCPV(customerId).subscribe((data:any)=>{
+      window.location.reload();
+    })
+  }
 
 }
 

@@ -1,8 +1,8 @@
-
+<!-- 
 <table class="table table-bordered">
     <thead>
         <tr>
-            <th>CASE ID</th>
+            <th>ID</th>
             <th>First Name</th>
             <th>Last Name</th>
             <th>AGE</th>
@@ -10,21 +10,53 @@
             <th>MOBILE NUMBER</th>
             <th>PAN CARD NUMBER</th>
             <th>ENQUIRY STATUS</th>
-            <th>VIEW APPLICATION FORM</th>
+            <th style="width: 200px;">ACTION</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let e of ">
-            <td>{{e.caseid}}</td>
+        <tr *ngFor="let e of enquiries">
+            <td>{{e.eid}}</td>
             <td>{{e.firstName}}</td>
             <td>{{e.lastName}}</td>
             <td>{{e.age}}</td>
             <td>{{e.email}}</td>
             <td>{{e.mobileNumber}}</td>
             <td>{{e.pancardNumber}}</td>
-            <td>{{e.enquiryStatus}}</td>
-           <td style="margin-bottom: 80px;"><button class="btn btn-success sndbtn">VIEW</button></td>
-         
+            <td style="color: rgb(20, 201, 20);">{{e.enquiryStatus}}</td>
+            <td style="margin-bottom: 80px;"><button class="btn btn-success sndbtn">APPROVE</button>
+                <button class="btn btn-danger sndbtn">REJECT</button></td>
+           
+        </tr>
+                         
+    </tbody>
+</table> -->
+<i class="glyphicon glyphicon-bell" >
+  
+</i>
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>LOAN ID</th>
+            <th>CUSTOMER NAME</th>
+            <th>EMAIL ID</th>
+            <th>CUSTOMER MOBILE</th>
+            <th>STATUS</th>
+            <th>LOAN AMOUNT</th>
+            <th>SANCTIONED</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of customers">
+            <td>{{e.currentLoanDetails.currentLoanNumber}}</td>
+            <td>{{e.customerName}}</td>
+            <td>{{e.customerEmail}}</td>
+            <td>{{e.customerMobileNumber}}</td>
+            <td>{{e.customerstatus}}</td>
+            <td>{{e.customerTotalLoanRequired}}</td>
+           <td style="margin-bottom: 80px;"><button class="btn btn-success sndbtn" (click)="sanctioned(e.customerId)">SANCTION</button></td>
+            
         </tr>
                          
     </tbody>

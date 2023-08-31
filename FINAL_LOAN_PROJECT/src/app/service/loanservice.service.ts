@@ -69,4 +69,19 @@ getsingleenq(pancardNumber:string)
   return this.http.get("http://localhost:9091/getsingleEnq/"+pancardNumber);
 }
 
+addcustomer(formdata:any)
+{
+  return this.http.post("http://localhost:9091/appform/",formdata);
+}
+
+getcustomers(customerstatus:string,customerstatus2:string)
+{
+  return this.http.get("http://localhost:9091/getappForm/"+customerstatus+"/"+customerstatus2);
+}
+
+initiateCPV(customerId:number)
+{
+  return this.http.put("http://localhost:9091/updateCustometstatus/"+customerId,{});
+}
+
 }

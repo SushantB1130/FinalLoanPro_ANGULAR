@@ -1,26 +1,31 @@
 
+
 <table class="table table-bordered">
     <thead>
         <tr>
-            <th>CASE ID</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>PAN CARD NUMBER</th>
-            <th>ENQUIRY STATUS</th>
-            <th>CUSTOMER VERIFICATION STATUS</th>
+            <th>LOAN ID</th>
+            <th>CUSTOMER NAME</th>
+            <th>EMAIL ID</th>
+            <th>CUSTOMER MOBILE</th>
+            <th>STATUS</th>
+            <th>LOAN AMOUNT</th>
+            <th>ACCOUNT NUMBER</th>
+            <th>BANK NAME</th>
             <th>DISBURSED</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let e of ">
-            <td>{{e.caseid}}</td>
-            <td>{{e.firstName}}</td>
-            <td>{{e.lastName}}</td> 
-            <td>{{e.pancardNumber}}</td>
-            <td>{{e.enquiryStatus}}</td>
-            <td>{{e.enquiryStatus}}</td>
-           <td style="margin-bottom: 80px;"><button class="btn btn-success sndbtn">DISBURSED</button></td>
-         
+        <tr *ngFor="let e of customers ">
+            <td>{{e.currentLoanDetails.currentLoanNumber}}</td>
+            <td>{{e.customerName}}</td>
+            <td>{{e.customerEmail}}</td>
+            <td>{{e.customerMobileNumber}}</td>
+            <td>{{e.customerstatus}}</td>
+            <td>{{e.customerTotalLoanRequired}}</td>
+            <td>{{e.accountDetails.accountNumber}}</td>
+            <td>{{e.accountDetails.bankname}}</td>
+           <td style="margin-bottom: 80px;"><button class="btn btn-success sndbtn" (click)="disbursed(e.customerId)">DISBURSE</button></td>
+            
         </tr>
                          
     </tbody>

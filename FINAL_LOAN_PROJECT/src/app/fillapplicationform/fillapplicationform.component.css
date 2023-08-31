@@ -35,8 +35,12 @@ select{
 display: flex;
 justify-content: center;
 margin-top: 10px;
+
 margin-left: 4%;
 margin-right: 5%;
+
+/* margin-left: 7%; */
+
 width: 1400px;
 
 

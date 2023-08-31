@@ -14,7 +14,7 @@ export class CheckApplicationComponent implements OnInit {
   enquiries:any[];
 
   
-  enquirystatus1:string='CIBIL_CHECKED';
+  enquirystatus1:string='CREDIT_STATE';
   enquirystatus2:string="no";
   ngOnInit(): void {
     

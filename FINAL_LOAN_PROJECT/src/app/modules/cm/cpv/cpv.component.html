@@ -1,75 +1,31 @@
-<!-- 
-<table class="table table-bordered">
+<table class="table table-bordered " style="width: 1300px;">
     <thead>
         <tr>
-            <th>ID</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>AGE</th>
-            <th>EMAIL</th>
-            <th>MOBILE NUMBER</th>
-            <th>PAN CARD NUMBER</th>
-            <th>ENQUIRY STATUS</th>
-            <th style="width: 200px;">ACTION</th>
+            <th>LOAN NUMBER</th>
+            <th>ADHAR CARD</th>
+            <th>ADDRRESS PROOF</th>
+            <th>PAN CARD</th>
+            <th>PHOTO</th>
+            <th>SIGNATURE</th>
+            <th>SALARY SLIP</th>
+            <th>VERIFY</th>
+            
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let e of enquiries">
-            <td>{{e.eid}}</td>
-            <td>{{e.firstName}}</td>
-            <td>{{e.lastName}}</td>
-            <td>{{e.age}}</td>
-            <td>{{e.email}}</td>
-            <td>{{e.mobileNumber}}</td>
-            <td>{{e.pancardNumber}}</td>
-            <td style="color: rgb(20, 201, 20);">{{e.enquiryStatus}}</td>
-            <td style="margin-bottom: 80px;"><button class="btn btn-success sndbtn">APPROVE</button>
-                <button class="btn btn-danger sndbtn">REJECT</button></td>
-           
-        </tr>
-                         
-    </tbody>
-</table> -->
-<i class="glyphicon glyphicon-bell" >
-  
-</i>
+        <tr *ngFor="let e of customers">
+            <td>{{e.currentLoanDetails.currentLoanNumber}}</td>
+            <td><img [src]="'data:image/png;base64,'+e.profilephoto" width="100px" height="100px"/></td>
+            <td><img [src]="'data:image/png;base64,'+e.profilephoto" width="100px" height="100px"/></td>
+            <td><img [src]="'data:image/png;base64,'+e.profilephoto" width="100px" height="100px"/></td>
+            <td><img [src]="'data:image/png;base64,'+e.profilephoto" width="100px" height="100px"/></td>
+            <td><img [src]="'data:image/png;base64,'+e.profilephoto" width="100px" height="100px"/></td>
+            <td><img [src]="'data:image/png;base64,'+e.profilephoto" width="100px" height="100px"/></td>
+            <td class="btn btn-success" (click)="verifycustomer(e.customerId)"><button>VERIFY</button></td>
+            <td class="btn btn-danger"><button>REJECT</button></td>
+            
+      
 
-
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>AGE</th>
-            <th>EMAIL</th>
-            <th>MOBILE NUMBER</th>
-            <th>PAN CARD NUMBER</th>
-            <th>ENQUIRY STATUS</th>
-            <th>VERIFY ENQUIRY</th>
-            <th>CIBIL SCORE</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let e of ">
-            <td>{{e.eid}}</td>
-            <td>{{e.firstName}}</td>
-            <td>{{e.lastName}}</td>
-            <td>{{e.age}}</td>
-            <td>{{e.email}}</td>
-            <td>{{e.mobileNumber}}</td>
-            <td>{{e.pancardNumber}}</td>
-            <td>{{e.enquiryStatus}}</td>
-           <td style="margin-bottom: 80px;"><button class="btn btn-success sndbtn" (click)="approvedcase(e.eid)"></button>
-            <button class="btn btn-danger sndbtn" (click)="rejectedcase(e.eid)">REJECT</button></td>
-            <td disabled >
-
-                <!-- <div class="spinner-border text-success" role="status" style="tranition:none;" *ngIf="cstatus" >
-                    <span class="sr-only">hii</span>
-                  </div> -->
-                  <h6 type="number" >{{e.cibil.cibilScore}}</h6>
-
-            </td>
         </tr>
                          
     </tbody>

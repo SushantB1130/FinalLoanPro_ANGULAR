@@ -40,7 +40,7 @@
         
       </div>
     </div>
-        <form style="margin-top: 40px" *ngIf="enquiries">
+        <form style="margin-top: 40px" *ngIf="enquiries" [formGroup]="cpvform" (ngSubmit)="addcustomer()">
           <label style="margin-top: 2%; margin-left: 6%; font-size: larger;">Fill Form here</label>
     
         <mat-accordion>
@@ -54,49 +54,49 @@
                 </mat-panel-title>
                 <hr>
                 <mat-panel-description  >
-                    Enter Customer Basic Details
+                     Customer Basic Details
                 </mat-panel-description>
               </mat-expansion-panel-header>
              
               <div class="row">    <!--Customer Details Entity-->
                 <div class="col-md-6 mt-md-0 mt-3">
                       <label>Customer Name</label>
-                    <input type="text" class="form-control" required>
+                    <input type="text" class="form-control" required formControlName="customerName">
                 </div><br>
           
                 <div class="col-md-3 mt-md-0 mt-3">
                     <label>Age</label>
-                  <input type="number" class="form-control" required>
+                  <input type="number" class="form-control" required formControlName="customerAge">
               </div>
               <div class="row">
                 <div class="col-md-6 mt-md-0 mt-3">
                     <label>Date Of Birth</label>
-                    <input type="date" class="form-control" required>
+                    <input type="date" class="form-control" required formControlName="customerDateOfBirth">
                 </div>
                 <div class="col-md-6 mt-md-0 mt-3">
                     <label>Gender</label>
                  
                     <div class="d-flex align-items-center mt-1">
-                        <select id="sub" required>
+                        <select id="sub" required formControlName="customerGender">
                             <option value="" selected hidden>Choose Option</option>
-                            <option value="Maths">Male</option>
-                            <option value="Science">Female</option>
-                            <option value="Social">Other</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
                         </select>
                     </div>
                 </div>
                 <div class="col-md-6 mt-md-0 mt-3">
                   <label>Email</label>
-                  <input type="email" class="form-control" required>
+                  <input type="text" class="form-control" required formGroup="customerEmail" placeholder="domain123@gmail.com">
               </div>
               <div class="col-md-6 mt-md-0 mt-3">
                   <label>Mobile Number</label>
-                  <input type="number" class="form-control" required >
+                  <input type="number" class="form-control" required  formControlName="customerMobileNumber">
               </div>
         
               <div class="col-md-6 mt-md-0 mt-3">
                   <label>Total Loan Required</label>
-                  <input type="number" class="form-control" required>
+                  <input type="number" class="form-control" required formControlName="customerTotalLoanRequired">
               </div>
             </div>
         
@@ -114,7 +114,7 @@
                  Address Details 
                 </mat-panel-description>
               </mat-expansion-panel-header>
-              <div class="row">
+              <div class="row" formGroupName="customerAddress">
               <div class="col-md-6 mt-md-0 mt-3">
                 <label>Customer Address</label>
                 <input type="text" class="form-control" required>
@@ -124,14 +124,14 @@
                 <label>City</label>
              
                 <div class="d-flex align-items-center mt-2">
-                    <select id="sub" required >
+                    <select id="sub" required  formControlName="customerCityname">
                         <option value="" selected hidden>Choose Option</option>
-                        <option value="Maths">Pimpari Chinchwad</option>
-                        <option value="Science">Pune</option>
-                        <option value="Social">Mumbai</option>
-                        <option value="Science">Amravati</option>
-                        <option value="Social">Nagpur</option>
-                        <option value="Social">Ralegaon</option>
+                        <option value="Pimpari Chinchwad">Pimpari Chinchwad</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Amravati">Amravati</option>
+                        <option value="Nagpur">Nagpur</option>
+                        <option value="Ralegaon">Ralegaon</option>
                     </select>
                 </div>
             </div>
@@ -139,13 +139,13 @@
                 <label>District</label>
              
                 <div class="d-flex align-items-center mt-2">
-                    <select id="sub" required style="width: 800px;">
+                    <select id="sub" required style="width: 800px;" formControlName="customerDistrict">
                         <option value="" selected hidden>Choose Option</option>
-                        <option value="Maths">Pune</option>
-                        <option value="Science">Mumbai</option>
-                        <option value="Social">Yavatmal</option>
-                        <option value="Science">Amravati</option>
-                        <option value="Social">Nagpur</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Yavatmal">Yavatmal</option>
+                        <option value="Amravati">Amravati</option>
+                        <option value="Nagpur">Nagpur</option>
                        
                     </select>
                 </div>
@@ -154,13 +154,13 @@
                 <label>State</label>
              
                 <div class="d-flex align-items-center mt-2">
-                    <select id="sub" required >
+                    <select id="sub" required  formControlName="customerState">
                         <option value="" selected hidden>State</option>
-                        <option value="Maths">Maharashtra</option>
-                        <option value="Science">Gujrat</option>
-                        <option value="Social">Madhya Pradesh</option>
-                        <option value="Science">Jharkhand</option>
-                        <option value="Social">Bihar</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Gujrat">Gujrat</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Bihar">Bihar</option>
                        
                     </select>
                 </div>
@@ -183,27 +183,27 @@
                 </mat-panel-description>
               </mat-expansion-panel-header>
              
-              <div class="row">    <!--Customer Details Entity-->
+              <div class="row" formGroupName="profession">    <!--Customer Details Entity-->
                  <!--Profession Entity-->
                  <div class="col-md-6 mt-md-0 mt-3"> 
                   <label>Profession</label>
                
                   <div class="d-flex align-items-center mt-2">
-                      <select id="sub" required>
+                      <select id="sub" required formControlName="professionType">
                           <option value="" selected hidden>Choose Your Profession</option>
-                          <option value="">Salaried Government Employee</option>
-                          <option value="">Salaried PVT LTD. Employee</option>
-                          <option value="">Self Employeed Professional</option>
-                          <option value="">Self Employeed Non-Professional</option>
-                          <option value="">Freelancer</option>
-                          <option value="">Student</option>
+                          <option value="Salaried Government Employee">Salaried Government Employee</option>
+                          <option value="Salaried PVT LTD. Employee">Salaried PVT LTD. Employee</option>
+                          <option value="Self Employeed Professional">Self Employeed Professional</option>
+                          <option value="Self Employeed Non-Professional">Self Employeed Non-Professional</option>
+                          <option value="Freelancer">Freelancer</option>
+                          <option value="Student">Student</option>
                       </select>
                   </div>
               </div>
         
               <div class="col-md-6 mt-md-0 mt-3">
                   <label>Company Name</label>
-                  <input type="text" class="form-control" required>
+                  <input type="text" class="form-control" required formControlName="companyname">
                 
               </div>  
             </div>   
@@ -219,63 +219,56 @@
                  Enter Current Loan Details
                 </mat-panel-description>
               </mat-expansion-panel-header>
-              <div class="row" >
+              <div class="row" formGroupName="currentLoanDetails">
                 <div class="col-md-6 mt-md-0 mt-3">
                   <label>Loan Amount</label>
-                  <input type="number" class="form-control" required>
+                  <input type="number" class="form-control" required formControlName="loanAmount" [(ngModel)]="amount">
                 
               </div>
               <div class="col-md-6 mt-md-0 mt-3">
+                <label>Tenure</label>
+              <div class="d-flex align-items-center mt-2">
+              
+                <select id="sub" required formControlName="tenure"  [(ngModel)]="this.tenure" (click)="Emical()">
+                    <option value="12">12</option>
+                    <option value="24">24</option>
+                    <option value="36">36</option>
+                    <option value="48">48</option>
+                </select>
+               
+            </div>
+            </div>
+              <div class="col-md-6 mt-md-0 mt-3">
                   <label>Rate Of Interest</label>
-                  <input type="number" class="form-control" required>
-                
+                  <input type="number" class="form-control" required [value]="interest" disabled="disabled"  formControlName="rateOfInterest">
+                  
               </div>
         
               <div class="col-md-6 mt-md-0 mt-3">
-                  <label>Tenure</label>
-                  <input type="number" class="form-control" required>
-                
-              </div>
-              <div class="col-md-6 mt-md-0 mt-3">
                   <label>Total Amount To Be Paid Double</label>
-                  <input type="number" class="form-control" required>
+                  <input type="number" class="form-control" required [value]="totalamountpayable"  formControlName="totalAmountToBePaidDouble">
                 
               </div>
               <div class="col-md-6 mt-md-0 mt-3">
                   <label>Processing Fees</label>
-                  <input type="number" class="form-control" required>
+                  <input type="number" class="form-control" required [value]="processingFees" disabled formArrayName="processingFees">
               </div>
               <div class="col-md-6 mt-md-0 mt-3">
                   <label>Total Interest</label>
-                  <input type="number" class="form-control" required>
+                  <input type="number" class="form-control" required [value]="totalinterestonamt" disabled formControlName="totalInterest">
                 
               </div>
         
-              <div class="col-md-6 mt-md-0 mt-3">
-                  <label>Sanction Date</label>
-                  <input type="text" class="form-control" required>
-              </div>
-              <div class="col-md-6 mt-md-0 mt-3">
-                  <label>Remark</label>
-                  <input type="text" class="form-control" required>
-                
-              </div>
-        
-              <div class="col-md-6 mt-md-0 mt-3">
-                  <label>Status</label>
-                  <input type="text" class="form-control" required>
-        
-              </div>
-              <div class="col-md-6 mt-md-0 mt-3">
-                <label>Emi Amount Monthly</label>
-                <input type="number" class="form-control" required>
-              
-            </div>
           </div> 
+          <div class="col-md-3 mt-md-0 mt-3 row">
+            <label>Emi Amount Monthly</label>
+            <input type="number" class="form-control" required [value]="emi" disabled formControlName="emiAmountMonthly" style="margin-left: 15px;">
+          
+        </div>
         </mat-expansion-panel>
           </mat-accordion>
           <!-- <mat-accordion>
-           
+          
             <mat-expansion-panel >
               <mat-expansion-panel-header >
                
@@ -302,31 +295,31 @@
                  Enter Account Details Information 
                 </mat-panel-description>
               </mat-expansion-panel-header>
-              <div class="row">
+              <div class="row" formGroupName="accountDetails">
                 <div class="col-md-6 mt-md-0 mt-3"> 
                   <label>Bank Account Type</label>
                   <div>
-                      <select id="sub" required style="width:400px ;">
+                      <select id="sub" required style="width:400px ;" formControlName="accounType">
                           <option value="" selected hidden>Choose Your Account Type</option>
-                          <option value="">Savings</option>
-                          <option value="">Current</option>
+                          <option value="saving">Savings</option>
+                          <option value="current">Current</option>
                       </select>  
                   </div> 
                   
               </div>
               <div class="col-md-6 mt-md-0 mt-3">
                   <label>Bank Account Number</label>
-                  <input type="text" class="form-control" required>
+                  <input type="number" class="form-control" required formGroupName="accountNumber">
                 
               </div>
               <div class="col-md-6 mt-md-0 mt-3">
                   <label>Account Holder Name</label>
-                  <input type="text" class="form-control" required>
+                  <input type="text" class="form-control" required formControlName="accountHolderName">
                 
               </div>
               <div class="col-md-6 mt-md-0 mt-3">
                   <label>Bank Name</label>
-                  <input type="text" class="form-control" required>
+                  <input type="text" class="form-control" required formControlName="bankname">
                 
               </div>  
           </div> 
@@ -348,23 +341,22 @@
                 </mat-panel-description>
               </mat-expansion-panel-header>
              
-              <div class="row">    <!--Customer Details Entity-->
+              <div class="row" formGroupName="gurantorDetails">    <!--Customer Details Entity-->
                 <div class="col-md-6 mt-md-0 mt-3">
                   <label>Guarantor Name</label>
-                  <input type="text" class="form-control" required>
+                  <input type="text" class="form-control" required formControlName="guarantorName">
                 
               </div>
               <div class="col-md-6 mt-md-0 mt-3"> 
                   <label>Guarantor Relationship With Customer</label>
                   <div>
-                      <select id="sub" required style="width:400px ;">
-                          <option value="" selected hidden>Choose Your Relationship</option>
-                          <option value="">Father</option>
-                          <option value="">Mother</option>
-                          <option value="">Brother</option>
-                          <option value="">Wife</option>
-                          <option value="">Sister</option>
-                          <option value="">Friend</option>
+                      <select id="sub"  required style="width:400px ;" formGroupName="guarantorRelationshipWithCustomer">
+                          <option value="Father">Father</option>
+                          <option value="Mother">Mother</option>
+                          <option value="Brother">Brother</option>
+                          <option value="Wife">Wife</option>
+                          <option value="Sister">Sister</option>
+                          <option value="Friend">Friend</option>
                       </select>  
                   </div> 
                   
@@ -372,7 +364,7 @@
            
               <div class="col-md-6 mt-md-0 mt-3">
                   <label>Guarantor Aadharcard Number</label>
-                  <input type="number" class="form-control" required>
+                  <input type="number" class="form-control" required formGroupName="guarantorAadharCardNumber">
                 
               </div>  
                  
@@ -394,34 +386,34 @@
                 <div class="col-md-6 mt-md-0 mt-3">
                   <label>Address Proof:-</label>
                   <!-- <img src="{{image}}" width=10% height = 25%> --> 
-                <input type="file">
+                <input type="file" (change)="onselectaddressproof($event)">
               </div> 
               <div class="col-md-6 mt-md-0 mt-3">
                 <label>Pan Card:-</label>
                 <!-- <img src="{{image}}" width=10% height = 25%> --> 
-              <input type="file">
+              <input type="file" (change)="onselectpan($event)">
             </div>  
             <div class="col-md-6 mt-md-0 mt-3">
               <label>Aadhar Card:-</label>
               <!-- <img src="{{image}}" width=10% height = 25%> --> 
-            <input type="file">
+            <input type="file" (change)="onselectadhar($event)">
           </div> 
           <div class="col-md-6 mt-md-0 mt-3">
             <label>Photo:-</label>
             <!-- <img src="{{image}}" width=10% height = 25%> --> 
-          <input type="file">
+          <input type="file" (change)="onselectphoto($event)">
         </div> 
            
         <div class="col-md-6 mt-md-0 mt-3">
           <label>Signature:-</label>
           <!-- <img src="{{image}}" width=10% height = 25%> --> 
-        <input type="file">
+        <input type="file" (change)="onselectsignature($event)">
         </div> 
         
         <div class="col-md-6 mt-md-0 mt-3">
           <label>Salary Slip:-</label>
           <!-- <img src="{{image}}" width=10% height = 25%> --> 
-        <input type="file">
+        <input type="file" (change)="onselectslip($event)">
         <br>
      
         </div> 
@@ -431,7 +423,8 @@
         
         
           </mat-accordion>
-    
+          
+          <button type="submit" class="btn btn-success" style="margin-top: 25px; margin-bottom: 40px; width: 250px; margin-left: 450px;">Submit</button>
     
         </form>
       </div>
