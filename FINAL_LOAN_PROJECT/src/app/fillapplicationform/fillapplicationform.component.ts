@@ -1,6 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { LoanserviceService } from '../service/loanservice.service';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-fillapplicationform',
@@ -45,8 +45,8 @@ ngOnInit(): void {
   openmyform()
   {
     this.cpvform = this.fb.group({
-      customerName: [],
-      customerDateOfBirth: [],
+      customerName: [ ,Validators.required],
+      customerDateOfBirth: [Validators.required],
       customerAge: [],
       customerGender: [],
       customerEmail: [],

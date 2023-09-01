@@ -61,7 +61,7 @@
               <div class="row">    <!--Customer Details Entity-->
                 <div class="col-md-6 mt-md-0 mt-3">
                       <label>Customer Name</label>
-                    <input type="text" class="form-control" required formControlName="customerName">
+                    <input type="text" class="form-control" required formControlName="customerName" >
                 </div><br>
           
                 <div class="col-md-3 mt-md-0 mt-3">
@@ -87,7 +87,7 @@
                 </div>
                 <div class="col-md-6 mt-md-0 mt-3">
                   <label>Email</label>
-                  <input type="text" class="form-control" required formGroup="customerEmail" placeholder="domain123@gmail.com">
+                  <input type="text" class="form-control" required formControlName="customerEmail" placeholder="domain123@gmail.com">
               </div>
               <div class="col-md-6 mt-md-0 mt-3">
                   <label>Mobile Number</label>
@@ -251,7 +251,7 @@
               </div>
               <div class="col-md-6 mt-md-0 mt-3">
                   <label>Processing Fees</label>
-                  <input type="number" class="form-control" required [value]="processingFees" disabled formArrayName="processingFees">
+                  <input type="number" class="form-control" required value='500' disabled formControlName="processingFees">
               </div>
               <div class="col-md-6 mt-md-0 mt-3">
                   <label>Total Interest</label>
@@ -309,7 +309,7 @@
               </div>
               <div class="col-md-6 mt-md-0 mt-3">
                   <label>Bank Account Number</label>
-                  <input type="number" class="form-control" required formGroupName="accountNumber">
+                  <input type="number" class="form-control" required formControlName="accountNumber">
                 
               </div>
               <div class="col-md-6 mt-md-0 mt-3">
@@ -350,7 +350,7 @@
               <div class="col-md-6 mt-md-0 mt-3"> 
                   <label>Guarantor Relationship With Customer</label>
                   <div>
-                      <select id="sub"  required style="width:400px ;" formGroupName="guarantorRelationshipWithCustomer">
+                      <select id="sub"  required style="width:400px ;" formControlName="guarantorRelationshipWithCustomer">
                           <option value="Father">Father</option>
                           <option value="Mother">Mother</option>
                           <option value="Brother">Brother</option>
@@ -364,7 +364,7 @@
            
               <div class="col-md-6 mt-md-0 mt-3">
                   <label>Guarantor Aadharcard Number</label>
-                  <input type="number" class="form-control" required formGroupName="guarantorAadharCardNumber">
+                  <input type="number" class="form-control" required formControlName="guarantorAadharCardNumber">
                 
               </div>  
                  
