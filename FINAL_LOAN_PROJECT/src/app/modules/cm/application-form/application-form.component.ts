@@ -35,6 +35,12 @@ export class ApplicationFormComponent implements OnInit {
       window.location.reload();
     })
   }
+  viewpdf(customerId:number)
+  {
+    this.ls.viewpdf(customerId).subscribe((data:any)=>{
+      
+    })
+  }
 
 }
 

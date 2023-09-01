@@ -56,7 +56,7 @@
             <td>{{e.customerMobileNumber}}</td>
             <td>{{e.customerstatus}}</td>
             <td>{{e.customerTotalLoanRequired}}</td>
-            <td><a href="view">View Form</a></td>
+            <td><a (click)="viewpdf(e.customerId)">View Form</a></td>
            <td style="margin-bottom: 80px;"><button class="btn btn-success sndbtn" (click)="initiatetCPV(e.customerId)">Itiate CPV</button></td>
             
         </tr>

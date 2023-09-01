@@ -84,4 +84,8 @@ initiateCPV(customerId:number)
   return this.http.put("http://localhost:9091/updateCustometstatus/"+customerId,{});
 }
 
+viewpdf(customerId:number)
+{
+  return this.http.get("http://localhost:9091/getPdf/"+customerId);
+}
 }
