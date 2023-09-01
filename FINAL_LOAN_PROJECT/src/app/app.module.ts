@@ -21,6 +21,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
 import { FillapplicationformComponent } from './fillapplicationform/fillapplicationform.component';
 import { MatExpansionModule, MatExpansionPanel } from '@angular/material/expansion';
+import { EmiCalculatorComponent } from './template/emi-calculator/emi-calculator.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { MatExpansionModule, MatExpansionPanel } from '@angular/material/expansi
     EnquiryComponent,
     HomeLandingPageComponent,
     FillapplicationformComponent,
+    EmiCalculatorComponent,
     
     
   ],

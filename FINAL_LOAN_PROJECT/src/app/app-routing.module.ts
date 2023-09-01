@@ -8,6 +8,7 @@ import { AppDashBoardComponent } from './entry/app-dash-board/app-dash-board.com
 import { EnquiryComponent } from './template/enquiry/enquiry.component';
 import { HomeLandingPageComponent } from './template/home-landing-page/home-landing-page.component';
 import { FillapplicationformComponent } from './fillapplicationform/fillapplicationform.component';
+import { EmiCalculatorComponent } from './template/emi-calculator/emi-calculator.component';
 
 const routes: Routes = [
   {path:"fillapp",component:FillapplicationformComponent},
@@ -17,7 +18,9 @@ const routes: Routes = [
                                                   {path:'about',component:AboutUsComponent},
                                                   {path:'contact',component:ContactUsComponent},
                                                   {path:'login',component:LoginComponent},
-                                                  {path:'enquiry',component:EnquiryComponent}
+                                                  {path:'enquiry',component:EnquiryComponent},
+                                                  { path: "emi", component: EmiCalculatorComponent }
+                                                 
                                                   
                                                 ]
   },
