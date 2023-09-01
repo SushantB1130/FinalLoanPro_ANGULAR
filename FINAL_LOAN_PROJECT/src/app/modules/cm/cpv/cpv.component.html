@@ -15,12 +15,12 @@
     <tbody>
         <tr *ngFor="let e of customers">
             <td>{{e.currentLoanDetails.currentLoanNumber}}</td>
-            <td><img [src]="'data:image/png;base64,'+e.profilephoto" width="100px" height="100px"/></td>
-            <td><img [src]="'data:image/png;base64,'+e.profilephoto" width="100px" height="100px"/></td>
-            <td><img [src]="'data:image/png;base64,'+e.profilephoto" width="100px" height="100px"/></td>
-            <td><img [src]="'data:image/png;base64,'+e.profilephoto" width="100px" height="100px"/></td>
-            <td><img [src]="'data:image/png;base64,'+e.profilephoto" width="100px" height="100px"/></td>
-            <td><img [src]="'data:image/png;base64,'+e.profilephoto" width="100px" height="100px"/></td>
+            <td><img [src]="'data:image/png;base64,'+e.allPersonalDoc.addharCard" width="100px" height="100px"/></td>
+            <td><img [src]="'data:image/png;base64,'+e.allPersonalDoc.addressProof" width="100px" height="100px"/></td>
+            <td><img [src]="'data:image/png;base64,'+e.allPersonalDoc.panCard" width="100px" height="100px"/></td>
+            <td><img [src]="'data:image/png;base64,'+e.allPersonalDoc.photo" width="100px" height="100px"/></td>
+            <td><img [src]="'data:image/png;base64,'+e.allPersonalDoc.signature" width="100px" height="100px"/></td>
+            <td><img [src]="'data:image/png;base64,'+e.allPersonalDoc.salarySlips" width="100px" height="100px"/></td>
             <td class="btn btn-success" (click)="verifycustomer(e.customerId)"><button>VERIFY</button></td>
             <td class="btn btn-danger"><button>REJECT</button></td>
             

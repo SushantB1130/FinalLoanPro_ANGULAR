@@ -20,10 +20,10 @@
             <td>{{e.customerName}}</td>
             <td>{{e.customerEmail}}</td>
             <td>{{e.customerMobileNumber}}</td>
-            <td>{{e.customerstatus}}</td>
+            <td style="color: green;">{{e.customerstatus}}</td>
             <td>{{e.customerTotalLoanRequired}}</td>
             <td>{{e.accountDetails.accountNumber}}</td>
-            <td>{{e.accountDetails.bankname}}</td>
+            <td style="color: red;">{{e.accountDetails.bankname}}</td>
            <td style="margin-bottom: 80px;"><button class="btn btn-success sndbtn" (click)="disbursed(e.customerId)">DISBURSE</button></td>
             
         </tr>

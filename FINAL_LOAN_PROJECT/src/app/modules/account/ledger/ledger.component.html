@@ -15,7 +15,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let e of ">
+        <tr *ngFor="let e of customers ">
             <td>{{e.currentLoanDetails.currentLoanNumber}}</td>
             <td>{{e.customerName}}</td>
             <td>{{e.customerEmail}}</td>
@@ -24,7 +24,7 @@
             <td>{{e.customerTotalLoanRequired}}</td>
             <td>{{e.accountDetails.accountNumber}}</td>
             <td>{{e.accountDetails.bankname}}</td>
-           <td style="margin-bottom: 80px;"><button class="btn btn-success sndbtn" (click)="disbursed(e.customerId)">DISBURSE</button></td>
+           <td style="margin-bottom: 80px;"><button class="btn btn-success sndbtn" (click)="createLedger(e.customerId)"> Create Ledger</button></td>
             
         </tr>
                          
