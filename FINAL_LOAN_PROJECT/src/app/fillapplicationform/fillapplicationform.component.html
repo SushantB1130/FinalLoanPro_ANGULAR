@@ -40,7 +40,7 @@
         
       </div>
     </div>
-        <form style="margin-top: 40px" *ngIf="enquiries" [formGroup]="cpvform" (ngSubmit)="addcustomer()">
+        <form style="margin-top: 40px" *ngIf="!enquiries" [formGroup]="cpvform" (ngSubmit)="addcustomer()">
           <label style="margin-top: 2%; margin-left: 6%; font-size: larger;">Fill Form here</label>
     
         <mat-accordion>
@@ -251,7 +251,7 @@
               </div>
               <div class="col-md-6 mt-md-0 mt-3">
                   <label>Processing Fees</label>
-                  <input type="number" class="form-control" required value='500' disabled formControlName="processingFees">
+                  <input type="number" class="form-control" required [value]='processingFees' disabled formControlName="processingFees">
               </div>
               <div class="col-md-6 mt-md-0 mt-3">
                   <label>Total Interest</label>

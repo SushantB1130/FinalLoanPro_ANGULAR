@@ -179,13 +179,13 @@ else{
 
   public emi:number;
 
-  public processingFees=500;
+  public processingFees:number;
 
   totalamountpayable:number;
 
   Emical()
   {
-    
+     this.processingFees=500;
     if(this.tenure==12)
     {
       alert(this.tenure);
